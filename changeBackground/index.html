@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change background color on hover</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        #box {
+            border: 3px solid green;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 150px;
+            margin: 20px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">Hover over me</div>
+
+    <script>
+        const box = document.querySelector('#box');
+        function changeColor() {
+            box.style.backgroundColor = 'green';
+        }
+        box.addEventListener('mouseover', changeColor);
+        box.addEventListener('mouseout', () => {
+            box.style.backgroundColor = '#fff';
+        })
+    </script>
+
+</body>
+
+</html>
